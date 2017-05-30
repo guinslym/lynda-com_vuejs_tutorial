@@ -4,13 +4,22 @@
 
 <div id="app">
     <h1>{{msg}}</h1>
+    <!-- Use of v-bind:  -->
+    <a v-bind:href="url">home</a>
+    <p>
+    	<form action="">
+    		Name: <input type="text" v-bind:value='name'/>
+    	</form>
+    </p>
 </div>
 
 <script>
-    new Vue({
+    var vm = new Vue({
        el: '#app',
        data: {
-           msg: 'Hello from Vue!'
+           msg: 'Hello from Vue!',
+           url: 'https://www.google.ca',
+           name: 'Mike'
        }
     });
 </script>
